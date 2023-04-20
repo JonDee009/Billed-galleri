@@ -1,0 +1,112 @@
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(68, 65, 133) 0%, rgb(79, 106, 181) 60%, rgb(24, 61, 196)100%);
+   
+
+}
+p {
+    font-family:'Courier New', Courier, monospace;
+    color:#fff;
+    margin-left: 4rem;
+}
+
+.gallery__thumbnails{
+    display: flex;
+    margin-top: 0%; 
+}
+
+.gallery__thumbnails, img {
+    width: 51px;
+    height: 60px; 
+    background: radial-gradient(circle, rgb(244, 244, 246) 0%, rgba(9,36,121,1) 35%, rgb(234, 241, 242) 100%);
+    -webkit-mask:radial-gradient(cirkel,#000 40%,#0001,#0e064a 80%) right/200% 100%;
+    background-repeat: no-repeat;
+    animation: gallery__thumbnails 15s infinite;
+    
+    
+    
+}
+
+.gallery__thumbnails, img:hover {
+    width: 55px;
+    height: 60px;  
+}
+
+img {
+    display: block;
+    
+}
+
+.gallery__button, button {
+    padding: 0%;
+    background: none;
+    border: none;
+    
+    
+}
+
+
+.gallery__container{
+    display: grid; 
+    margin: 2rem;
+    /*border: 10px thin rgb(82, 75, 185);
+    border-style:outset;
+    border-radius: 2%;
+    filter:drop-shadow(10px);*/
+   
+      
+    
+}
+
+.gallery__focusedImage{
+    width: 550px;
+    height: 400px;
+    justify-self: flex-start;
+    pointer-events: none;
+    background: radial-gradient(circle, rgb(244, 244, 246) 0%, rgba(9,36,121,1) 35%, rgb(234, 237, 242) 60%,  rgba(9,36,121,1) 100%);
+    border-radius: 2% 2% 0% 0%;
+    margin-bottom: 1px; 
+    filter:drop-shadow(10px);
+    border-right: 10px thin rgb(82, 75, 185);
+    border-style:outset;
+    padding: 5rem; 
+     
+}
+
+/*@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }*/
+
+@keyframes gallery__thumbnails {
+    50% {-webkit-mask-position:left}
+  }
+
+@media screen and (max-width: 700px) {
+    .gallery__focusedImage{
+      width: 350px;
+      height: 280px;
+      
+    }
+    .gallery__thumbnails, img {
+        width: 37px;
+        height: 40px; 
+        display: flex;   
+      
+    }
+    .gallery__thumbnails, img:hover {
+        width: 40px;
+        height: 45px; 
+        display: flex;
+    
+        
+        
+    }
+    .gallery__container{
+        display: grid; 
+        margin: none;
+        margin-left: none;  
+    }
+  }
+
